@@ -10,8 +10,6 @@ PKG_NAME:=live2d
 PKG_VERSION:=1
 PKG_RELEASE:=12
 
-include $(TOPDIR)/feeds/luci/luci.mk
-
 include $(INCLUDE_DIR)/package.mk
 
 define Package/live2d
