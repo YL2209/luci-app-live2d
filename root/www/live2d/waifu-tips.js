@@ -24,7 +24,7 @@ function loadWidget(config) {
 	sessionStorage.removeItem("waifu-text");
 	document.body.insertAdjacentHTML("beforeend", `<div id="waifu">
 			  <div id="waifu-tips"></div>
-			  <canvas id="live2d" width="600" height="600"></canvas>
+			  <canvas id="live2d" width="480" height="480"></canvas>
 			  <div id="waifu-tool">
 				  <span class="fa fa-lg fa-comment faa-tada animated-hover"></span>
 				  <span class="fa fa-lg fa-paper-plane faa-tada animated-hover"></span>
