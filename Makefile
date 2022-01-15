@@ -6,26 +6,11 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=live2d
+LUCI_TITLE:=Luci for live2d
+LUCI_PKGARCH:=all
 PKG_VERSION:=1
 PKG_RELEASE:=12
 
-include $(INCLUDE_DIR)/package.mk
+include $(TOPDIR)/feeds/luci/luci.mk
 
-define Package/live2d
-  SECTION:=luci
-  CATEGORY:=LuCI
-  TITLE:=live2d-web
-  PKGARCH:=all
-endef
-
-define Build/Compile
-endef
-
-define Package/live2d/install
-	$(INSTALL_DIR) $(1)/etc/uci-defaults
-	$(INSTALL_BIN) ./files/live2d-widget $(1)/etc/uci-defaults/99-live2d-widget
-endef
-
-$(eval $(call BuildPackage,live2d))
-
+# call BuildPackage - OpenWrt buildroot signature
