@@ -1,0 +1,7 @@
+#!/bin/sh
+
+echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>' >> /usr/lib/lua/luci/view/footer.htm
+echo '<script src="/live2d/autoload.js"></script>' >> /usr/lib/lua/luci/view/footer.htm
+
+
+exit 0
