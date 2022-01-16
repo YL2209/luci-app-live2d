@@ -22,7 +22,7 @@ function loadWidget(config) {
 	}
 	localStorage.removeItem("waifu-display");
 	sessionStorage.removeItem("waifu-text");
-	document.body.insertAdjacentHTML("beforeend", `<div id="waifu" style="bottom: -500px;>
+	document.body.insertAdjacentHTML("beforeend", `<div id="waifu">
 			  <div id="waifu-tips"></div>
 			  <canvas id="live2d" width="480" height="480"></canvas>
 			  <div id="waifu-tool">
@@ -292,12 +292,12 @@ function loadWidget(config) {
 	  }
 	});
 	if (localStorage.getItem("waifu-display") && Date.now() - localStorage.getItem("waifu-display") <= 86400000) {
-	  loadWidget(config);
-        } else {
 	  toggle.setAttribute("first-time", true);
 	  setTimeout(() => {
 		toggle.classList.add("waifu-toggle-active");
 	  }, 0);
+	} else {
+	  loadWidget(config);
 	}
   }
   
